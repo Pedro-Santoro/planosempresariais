@@ -7,7 +7,6 @@
    top: 0;
     z-index: 1000;
 }
-
 .container-header {
     max-width: 1200px;
     margin: auto;
@@ -16,6 +15,7 @@
     justify-content: space-between;
     padding: 10px 20px;
 }
+
 .navbar-nav .nav-link {
   color: #003366; /* cor padrão */
   font-weight: 500;

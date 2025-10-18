@@ -1,0 +1,155 @@
+/* ====== HEADER COLADO NO TOPO ====== */
+.top-header-obrigado {
+    background: transparent;
+    padding-top: 0;
+    /* tira o espaço superior */
+    text-align: center;
+    margin-top: 0;
+}
+
+.logo-obrigado {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-obrigado img {
+    width: 200px;
+    border-radius: 20px;
+    /* bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* sombra suave */
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Efeito ao passar o mouse */
+.logo-obrigado img:hover {
+    transform: scale(1.05);
+}
+
+/* Centraliza o conteúdo verticalmente */
+.main-obrigado-centralizado {
+    min-height: calc(100vh - 220px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.conteudo-obrigado {
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 25px;
+}
+
+/* Fundo suave */
+.fundo-azul-obrigado {
+    background-color: #f4f7fb;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .logo-obrigado img {
+        width: 150px;
+    }
+
+    .titulo-obrigado {
+        font-size: 2rem;
+    }
+}
+
+/* Animação de entrada suave */
+.logo-obrigado img,
+.conteudo-obrigado {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 1s ease forwards;
+}
+
+.conteudo-obrigado {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BOTÕES AJUSTADOS COM ESPAÇAMENTO E ESTILO PADRÃO */
+/* ====== BOTÕES ESTILO BOOTSTRAP ====== */
+.btn-whatsapp {
+    background-color: #198754 !important;
+    /* Cor padrão do btn-success */
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background-color: #157347 !important;
+    /* Hover do btn-success */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(25, 135, 84, 0.4);
+}
+
+/* BOTÃO SECUNDÁRIO - VOLTAR PARA HOME */
+.btn-voltar-home {
+    background-color: #0d6efd !important;
+    /* Cor padrão do btn-primary */
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+.btn-voltar-home:hover {
+    background-color: #0b5ed7 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(13, 110, 253, 0.4);
+}
+
+/* CENTRALIZA OS BOTÕES */
+.conteudo-obrigado {
+    text-align: center;
+}
+
+/* Espaçamento entre os botões */
+.conteudo-obrigado a {
+    margin: 10px;
+}
+
+/* LOGO COLADA NO TOPO, CENTRALIZADA */
+.top-header {
+    text-align: center;
+    padding: 20px 0 0 0;
+    /* remove o espaço inferior */
+    background: transparent;
+    box-shadow: none;
+}
+
+.top-header .logo img {
+    width: 120px;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+}
