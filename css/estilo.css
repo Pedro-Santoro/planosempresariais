@@ -1,0 +1,239 @@
+.container {
+  width: 90%;
+}
+
+h3 a {
+  text-align: center !important;
+  display: block;
+  color: #007bff;
+}
+
+h3 {
+  text-align: left !important;
+}
+
+p {
+  text-align: justify;
+}
+
+.lista-vantagens {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0 25px 0;
+}
+
+.lista-vantagens li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+  /* suaviza o hover */
+}
+
+/* marcador verde */
+.lista-vantagens li::before {
+  content: "✔";
+  color: #1aa84f;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(2px);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* efeito hover */
+.lista-vantagens li:hover {
+  color: #1aa84f;
+  /* muda a cor do texto */
+  transform: translateX(5px);
+  /* leve movimento para a direita */
+}
+
+/* marcador também ganha leve animação */
+.lista-vantagens li:hover::before {
+  color: #138f3e;
+  transform: translateY(2px) scale(1.2);
+}
+
+/* variação azul */
+.lista-vantagens.azul li::before {
+  color: #007bff !important;
+  /* força a prioridade */
+}
+
+.lista-vantagens.azul li:hover {
+  color: #007bff !important;
+  /* aplica no texto */
+}
+
+.lista-vantagens.azul li:hover::before {
+  color: #0062cc !important;
+  /* tom mais escuro no hover */
+}
+
+.site-footer {
+  background: #f4f6f8;
+  /* cor suave de fundo */
+  color: #333;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 40px;
+}
+
+.site-footer a {
+  color: #1aa84f;
+  /* verde principal */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #138f3e;
+  text-decoration: underline;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* botão “voltar ao topo” */
+.back-to-top {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* responsivo */
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 0.85rem;
+  }
+}
+
+.navbar a,
+.navbar button,
+.navbar li a {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar a:hover,
+.navbar button:hover,
+.navbar li a:hover {
+  text-decoration: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #003366;
+  /* Azul escuro dá toque de confiança */
+}
+
+/* Título principal: O h1 dentro da div centralizada */
+.container.text-center h1 {
+  font-size: 3.5rem;
+  /* Um tamanho grande para desktop */
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #003366;
+  /* Mantém a cor da família de títulos */
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== AJUSTA O ESPAÇO ENTRE AS DUAS COLUNAS ===== */
+.row.featurette {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  /* diminui a distância horizontal */
+}
+
+/* Garante que as colunas ocupem melhor o espaço */
+.row.featurette>div {
+  flex: 1;
+  max-width: 48%;
+  padding: 10px;
+}
+
+
+/* Ajuste do container geral para alinhar tudo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .row.featurette {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* CORREÇÃO: Garante que os filhos do featurette (as colunas) ocupem 100% */
+  .row.featurette>div {
+    max-width: 100%;
+    padding: 0 15px;
+    /* Ajusta o padding para as laterais */
+  }
+}
+
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+
+  /* Reduz drasticamente o tamanho do título principal em celulares */
+  .container.text-center h1 {
+    font-size: 2rem;
+    /* Um tamanho bom para celular */
+    line-height: 1.2;
+  }
+
+  /* *OPCIONAL* - Ajuste se o texto dos parágrafos logo abaixo estiver ruim */
+  .container.text-center p {
+    text-align: center;
+    padding: 0 10px;
+    /* Adiciona um espaço nas laterais */
+  }
+}

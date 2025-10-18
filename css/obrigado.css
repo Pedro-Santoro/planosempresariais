@@ -1,0 +1,11 @@
+/* Estilo Específico para a página de agradecimento (obrigado.html) */
+.fundo-azul-obrigado {
+    background-color: #003366; 
+}
+
+/* Ajusta a cor do texto para branco na página de obrigado para contraste */
+.fundo-azul-obrigado .container.text-center h1,
+.fundo-azul-obrigado .container.text-center p,
+.fundo-azul-obrigado .container.text-center i {
+    color: #ffffff !important; /* Força o texto, h1 e ícones a serem brancos */
+}

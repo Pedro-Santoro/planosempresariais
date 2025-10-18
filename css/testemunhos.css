@@ -1,0 +1,95 @@
+/* 1. Reset e Prevenção de Overflow */
+/* Correção de Overflow na Raiz do Documento */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Garante que não ultrapasse 100% */
+  overflow-x: hidden; /* Oculta a barra horizontal em TODOS os casos */
+}
+
+/* Aplica o box-sizing universalmente */
+* {
+  box-sizing: border-box;
+}
+/* Depois: .swiper-container ou .mySwiper (se for o principal contêiner) */
+
+.testemunhos-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+/* **CORREÇÃO CRUCIAL AQUI** */
+.mySwiper {
+  width: 100%;
+  max-width: 900px; /* Aumentei a largura para caber os 3 depoimentos */
+  margin: 0 auto;
+  /* Adicione padding lateral para garantir espaço para as setas */
+  padding: 20px 50px;
+  overflow: hidden;
+}
+/* Garante que o contêiner de slides não seja esmagado */
+.swiper-wrapper {
+  /* Garante que o wrapper possa crescer com flexbox */
+  display: flex;
+}
+/*-----------------------------------------------------------------*/
+
+.testemunho-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Adicione este para prevenir estouros */
+}
+
+/* ... (o restante do seu código está ok, mas o cliente-info precisa ser flex) ... */
+
+.cliente-info {
+  display: flex; /* <-- ISSO É CRUCIAL PARA O ALINHAMENTO */
+  align-items: center;
+  justify-content: flex-start; /* Alinha à esquerda dentro do card */
+  gap: 15px;
+}
+/* Correção final para forçar a largura do slide em configurações de múltiplos slides */
+.swiper-slide {
+  /*width: auto !important;*/
+  /* Adicione estas linhas para prevenir que o Flexbox esmague o slide */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cliente-foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* <-- ISSO VAI FAZER A FOTO FICAR REDONDA */
+  object-fit: cover;
+}
+/* Regra para empilhar Nome e Título */
+.cliente-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .mySwiper {
+    padding: 20px 20px; /* Reduz o padding lateral pra não cortar slides */
+  }
+
+  .swiper-slide {
+    width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Esconde setas em telas pequenas (opcional) */
+  }
+}
+.testemunhos-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
