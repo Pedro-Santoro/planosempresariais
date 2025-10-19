@@ -322,10 +322,10 @@
 
                         <form action="https://crm.planosdesaudebrj.com.br/recebe_leads.php" method="POST">
 
-                        <input type="text" name="nome_completo" placeholder="Seu Nome" required />
-                        <input type="text" id="whats" name="whats" placeholder="Seu Whatsapp" required />
+                        <input type="text" name="nome_completo"  autocomplete="nome_completo" placeholder="Seu Nome" required />
+                        <input type="text" id="whats" name="whats" autocomplete="telefone" placeholder="Seu Whatsapp" required />
 						<input type="text" name="apelido" style="display:none !important;">
-                        <input type="email" name="email" placeholder="Seu Email" required />
+                        <input type="email" name="email" autocomplete="email" placeholder="Seu Email" required />
                         <button type="submit" class="btn-enviar">Enviar</button>
                         </form>
                     </div>
