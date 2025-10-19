@@ -320,10 +320,11 @@
                         <h2>Agendamento Rápido</h2>
                         <p>Preencha seus dados para entrarmos em contato.</p>
 
-                        <form action="https://crm.planosdesaudebrj.com.br/recebe_leads.php" method="POST" />
+                        <form action="https://crm.planosdesaudebrj.com.br/recebe_leads.php" method="POST">
 
                         <input type="text" name="nome_completo" placeholder="Seu Nome" required />
                         <input type="text" id="whats" name="whats" placeholder="Seu Whatsapp" required />
+						<input type="text" name="apelido" style="display:none !important;">
                         <input type="email" name="email" placeholder="Seu Email" required />
                         <button type="submit" class="btn-enviar">Enviar</button>
                         </form>
