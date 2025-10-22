@@ -1,0 +1,48 @@
+
+/* -------- IMAGENS ARREDONDADAS (seguro para não afetar o popup) -------- */
+main .img-hover-overlay {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 15%;
+}
+
+main .img-hover-overlay img {
+  display: block;
+  width: 100%;
+  border-radius: 15%;
+  transition: transform 0.4s ease;
+}
+
+main .img-hover-overlay:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+main .img-hover-overlay figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+main .img-hover-overlay:hover figcaption {
+  opacity: 1;
+}
+
+/* -------- LOGO (sem interferir no modal) -------- */
+header .logoplano {
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .logoplano:hover {
+  transform: scale(1.15) translateY(-5px);
+  filter: brightness(1.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}

@@ -43,7 +43,7 @@
         <div class="container-header">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.svg" alt="Pedro Santoro - Logo da página planos de saúde"
+                    <img src="images/logo.svg" class="logoplano" alt="Pedro Santoro - Logo da página planos de saúde"
                         style="max-width: 200px; display: block; margin: 0 auto" />
                 </a>
             </div>
@@ -110,10 +110,10 @@
                     </h3>
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <figure>
+                    <figure class="img-hover-overlay">
                         <img src="images/como-funciona-o-plano-de-saude-empresarial.webp" style="border-radius: 20px"
                             alt="Como funciona o plano de saúde empresarial"
-                            title="Como funciona o plano de saúde empresarial" class="img-fluid" />
+                            title="Como funciona o plano de saúde empresarial"/>
                     </figure>
                     <h3 style="margin-top: 10px; text-align: center;">
                         <strong>Como funciona o plano de saúde empresarial</strong>
@@ -124,6 +124,15 @@
             <hr class="featurette-divider" />
 
             <div class="row featurette">
+                <div class="col-lg-6 col-md-12">
+                    <figure class="img-hover-overlay">
+                        <img src="images/amilplano.webp" alt="Plano de saúde empresarial tem carência?"
+                            title="Plano de saúde empresarial tem carência?"/>
+                    </figure>
+                    <h3 style="margin-top: 10px; text-align: center;">
+                        <strong>Plano de saúde empresarial regional e nacional.</strong>
+                    </h3>
+                </div>
                 <div class="col-lg-6 col-md-12">
                     <h3 class="featurette-heading">
                         Planos de Saúde tem carência?
@@ -148,16 +157,6 @@
                         Pensando nisso, oferemos a você as melhores opções com condições
                         imperdíveis para você cuidar de quem ama.
                     </p>
-                </div>
-                <div class="col-lg-6 col-md-12 order-md-1">
-                    <figure>
-                        <img src="images/amilplano.webp" style="border-radius: 20px"
-                            alt="Plano de saúde empresarial tem carência?"
-                            title="Plano de saúde empresarial tem carência?" class="img-fluid" />
-                    </figure>
-                    <h3 style="margin-top: 10px; text-align: center;">
-                        <strong>Plano de saúde empresarial regional e nacional.</strong>
-                    </h3>
                 </div>
             </div>
             <hr class="featurette-divider" />
@@ -294,10 +293,10 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <figure>
+                    <figure class="img-hover-overlay">
                         <img src="images/convenio cobre internação para cirurgia plastica.webp"
                             style="border-radius: 20px" alt="convenio cobre internação para cirurgia plastica"
-                            title="convenio cobre internação para cirurgia plastica" class="img-fluid" />
+                            title="convenio cobre internação para cirurgia plastica"/>
                     </figure>
                     <h3 style="margin-top: 10px; text-align: center;">
                         <strong>O Planos de Saúde Ideal para a sua empresa.</strong>
@@ -322,11 +321,13 @@
 
                         <form action="https://crm.planosdesaudebrj.com.br/recebe_leads.php" method="POST">
 
-                        <input type="text" name="nome_completo"  autocomplete="nome_completo" placeholder="Seu Nome" required />
-                        <input type="text" id="whats" name="whats" autocomplete="telefone" placeholder="Seu Whatsapp" required />
-						<input type="text" name="apelido" style="display:none !important;">
-                        <input type="email" name="email" autocomplete="email" placeholder="Seu Email" required />
-                        <button type="submit" class="btn-enviar">Enviar</button>
+                            <input type="text" name="nome_completo" autocomplete="nome_completo" placeholder="Seu Nome"
+                                required />
+                            <input type="text" id="whats" name="whats" autocomplete="telefone"
+                                placeholder="Seu Whatsapp" required />
+                            <input type="text" name="apelido" style="display:none !important;">
+                            <input type="email" name="email" autocomplete="email" placeholder="Seu Email" required />
+                            <button type="submit" class="btn-enviar">Enviar</button>
                         </form>
                     </div>
                 </div>
