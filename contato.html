@@ -63,7 +63,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
                             <li class="nav-item"><a class="nav-link" href="sobre.html">SOBRE</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="contato.html">CONTATOS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contato.html">CONTATOS</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,6 +109,11 @@
                                 cirurgia
                                 estética</p>
                             <style>
+                                a,
+                                a:hover {
+                                    text-decoration: none
+                                }
+
                                 .input-icon {
                                     position: relative
                                 }
@@ -144,17 +149,15 @@
                                 }
 
                                 .obrigatorio {
-                                    color: red;
+                                    color: red
                                 }
 
                                 a {
-                                    text-decoration: none;
-                                    color: blue;
+                                    color: #00f
                                 }
 
                                 a:hover {
-                                    text-decoration: none;
-                                    color: rgb(2, 89, 160);
+                                    color: #0259a0
                                 }
                             </style>
 
@@ -162,7 +165,7 @@
                                 <input type="hidden" name="_template" value="table">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_next"
-                                    value="https://pedro-santoro.github.io/planosempresariais/obrigado.html">
+                                    value="https://empresa.planosdesaudephs.com.br/obrigado.html">
 
                                 <div class="mb-3 form-group">
                                     <label for="nome"><span class="obrigatorio">*</span> Seu Nome</label>
@@ -301,11 +304,11 @@
 
     <!-- SCRIPT LINKS INTELIGENTES -->
     <script>
-        const page = location.pathname.split("/").pop(), navLinks = { "/": [{ text: "SOBRE", url: "sobre.html" }, { text: "CONTATO", url: "contato.html" }], "sobre.html": [{ text: "HOME", url: "/" }, { text: "CONTATO", url: "contato.html" }], "contato.html": [{ text: "HOME", url: "/" }, { text: "SOBRE", url: "sobre.html" }] }, listContainer = document.getElementById("footer-links"); (navLinks[page] || []).forEach(t => { let e = document.createElement("a"); e.href = t.url, e.innerText = "➜ " + t.text, e.style.marginRight = "10px", listContainer.appendChild(e) }), document.querySelector(".back-to-top").addEventListener("click", t => { t.preventDefault(), window.scrollTo({ top: 0, behavior: "smooth" }) });
+        let page = location.pathname.split("/").pop(); "" === page && (page = "index.html"), "index" === page && (page = "index.html"); const navLinks = { "index.html": [{ text: "SOBRE", url: "sobre.html" }, { text: "CONTATO", url: "contato.html" }], "sobre.html": [{ text: "HOME", url: "/" }, { text: "CONTATO", url: "contato.html" }], "contato.html": [{ text: "HOME", url: "/" }, { text: "SOBRE", url: "sobre.html" }] }, listContainer = document.getElementById("footer-links"); (navLinks[page] || []).forEach(t => { let e = document.createElement("a"); e.href = t.url, e.innerText = "➜ " + t.text, e.style.marginRight = "10px", listContainer.appendChild(e) }), document.querySelector(".back-to-top").addEventListener("click", t => { t.preventDefault(), window.scrollTo({ top: 0, behavior: "smooth" }) });
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () { let t = document.querySelectorAll(".nav-link"), e = window.location.pathname; t.forEach(t => { t.getAttribute("href") === e.split("/").pop() && t.classList.add("active") }) });
+        document.addEventListener("DOMContentLoaded",function(){let t=document.querySelectorAll(".nav-link"),e=window.location.pathname.split("/").pop();(""===e||"index"===e||"index.html"===e)&&(e="index.html"),t.forEach(t=>{let n=t.getAttribute("href");(n===e||"/"===n&&"index.html"===e)&&t.classList.add("active")})});
     </script>
 
     <!-- Bibliotecas base (caso seu site use Bootstrap ou jQuery) -->
@@ -326,4 +329,5 @@
         <div class="whats-tooltip">💬 Fale Conosco</div>
     </a>
 </body>
- </html>
+
+</html>
