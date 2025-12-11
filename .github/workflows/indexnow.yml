@@ -1,1 +1,24 @@
+name: IndexNow Submit
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Submit URLs to IndexNow
+        run: |
+          urls=$(git diff --name-only HEAD^ HEAD | grep -E "\.html$" | sed 's|^|https://empresa.planosdesaudephs.com.br/|')
+          for url in $urls; do
+            curl -X POST "https://api.indexnow.org/IndexNow" -H "Content-Type: application/json" -d "{
+              \"host\": \"empresa.planosdesaudephs.com.br\",
+              \"key\": \"c4e0af9b9d594a0e90d9aabbaf022991\",
+              \"urlList\": [\"$url\"]
+            }"
+          done
